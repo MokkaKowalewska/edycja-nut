@@ -1,12 +1,18 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 
-const Button = styled.button`
+const ButtonStyled = styled.button`
   padding: 15px;
   border-radius: 20px;
   background: transparent;
-  border: 2px solid #2a3747;
-  color: #2a3747;
+  border: 2px solid #ffffff;
 `
+
+const Button = ({ children }) => <ButtonStyled>{children}</ButtonStyled>
+
+Button.propTypes = {
+  children: PropTypes.node,
+}
 
 export default Button

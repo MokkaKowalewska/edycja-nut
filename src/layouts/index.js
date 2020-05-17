@@ -11,4 +11,8 @@ const MainLayout = ({ children }) => (
   </>
 )
 
+MainLayout.propTypes = {
+  children: PropTypes.node,
+}
+
 export default MainLayout

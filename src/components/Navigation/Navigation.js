@@ -4,21 +4,24 @@ import { Link } from "gatsby"
 
 const NavigationWrapper = styled.nav`
   position: absolute;
-  top: 20px;
-  left: 30px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 10px 50px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   font-family: "Raleway", serif;
 
   a {
     text-decoration: none;
-    color: #0b214b;
+    color: #ffffff;
   }
 `
 
 const Logo = styled.span`
-  font-family: "Teko", serif;
+  font-family: "Syncopate", serif;
+  font-size: 3rem;
 `
 
 const NavigationList = styled.ul`
