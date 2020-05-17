@@ -1,8 +1,10 @@
 import React from "react"
-import styled from "styled-components"
 
-import Navigation from "../components/Navigation/Navigation"
-
-const IndexPage = () => <Navigation />
+const IndexPage = () => (
+  <>
+    <h1>Napiszę Ci</h1>
+    <p>nutki, dużo nutek, piękne nutki!</p>
+  </>
+)
 
 export default IndexPage

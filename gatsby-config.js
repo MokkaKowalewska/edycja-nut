@@ -16,10 +16,11 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-layout`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Raleway\:400`, `Playfair Display`],
+        fonts: [`Raleway`, `Teko`],
         display: "swap",
       },
     },

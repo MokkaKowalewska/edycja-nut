@@ -3,6 +3,9 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const NavigationWrapper = styled.nav`
+  position: absolute;
+  top: 20px;
+  left: 30px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -15,7 +18,7 @@ const NavigationWrapper = styled.nav`
 `
 
 const Logo = styled.span`
-  font-family: "Playfair Display", serif;
+  font-family: "Teko", serif;
 `
 
 const NavigationList = styled.ul`
