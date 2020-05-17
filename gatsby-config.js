@@ -10,25 +10,17 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Playfair Display`,
-            subsets: [`latin`],
-          },
-          {
-            family: `Lato`,
-            variants: [`500`, `700`],
-          },
-        ],
+        fonts: [`Raleway\:400`, `Playfair Display`],
+        display: "swap",
       },
     },
     // {
