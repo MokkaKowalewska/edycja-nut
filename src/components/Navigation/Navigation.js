@@ -6,21 +6,22 @@ const NavigationWrapper = styled.nav`
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 999;
   width: 100vw;
   padding: 10px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "Raleway", serif;
+  font-family: "Jost", serif;
 
   a {
     text-decoration: none;
-    color: #ffffff;
+    color: ${props => props.color};
   }
 `
 
 const Logo = styled.span`
-  font-family: "Syncopate", serif;
+  font-family: "Righteous", serif;
   font-size: 3rem;
 `
 
@@ -39,10 +40,10 @@ const NavigationListItem = styled.li`
   letter-spacing: 0.35px;
 `
 
-const Navigation = () => (
-  <NavigationWrapper>
+const Navigation = props => (
+  <NavigationWrapper color={props.color}>
     <Logo>
-      <Link to="/">Edycja nut</Link>
+      <Link to="/">edycja nut</Link>
     </Logo>
     <NavigationList>
       <NavigationListItem>

@@ -17,8 +17,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     min-height: 100vh;
     margin: 0;
-    padding: 80px 65px 0;
-    font-family: 'Raleway';
+    font-family: 'Jost';
     font-size: 1.6rem;
     color: #ffffff;
   }
@@ -26,10 +25,10 @@ const GlobalStyle = createGlobalStyle`
   button {
     padding: 0;
     cursor: pointer;
-    font-family: 'Raleway';
-    font-weight: 700;
+    font-family: 'Jost', sans-serif;
+    font-size: 1.8rem;
     color: #ffffff;
-    text-transform: uppercase;
+    letter-spacing: 1.1;
   }
 
   button:hover {
