@@ -7,9 +7,7 @@ import Navigation from "../components/Navigation/Navigation"
 const MainLayout = ({ children }) => (
   <>
     <GlobalStyle />
-    <Navigation
-      color={window.location.pathname !== "/" ? "#000000" : "#ffffff"}
-    />
+    <Navigation color={"#818181"} />
     {children}
   </>
 )
