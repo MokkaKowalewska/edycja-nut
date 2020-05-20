@@ -8,4 +8,4 @@
   Website for a small company
 </h1>
 
-My new real-world project - website made using Gatsby.js.
+My new real-world project - website created with React & Gatsby & WordPress as a headless CMS.
