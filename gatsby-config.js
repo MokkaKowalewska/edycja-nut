@@ -27,13 +27,17 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: {
-        // Arbitrary name for the remote schema Query type
         typeName: "WORDPRESS",
-        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
         fieldName: "wordpress",
-        // Url to query from
         url: "http://wp.edycjanut.pl/graphql",
         refetchInterval: 60,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-graphql-image",
+      options: {
+        schemaName: "WORDPRESS",
+        imageFieldName: "sourceUrl",
       },
     },
     // {

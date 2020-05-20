@@ -33,33 +33,31 @@ const StyledImage = styled(BackgroundImage)`
 `
 
 const IndexPage = ({ data }) => {
-  // const backgroundFluidImageStack = [
-  //   data.pages.nodes.home.BackgroundImage.sourceUrl,
-  //   `linear-gradient(rgba(61, 89, 131, 0.63), rgba(37, 34, 35, 0.53))`,
-  // ].reverse()
+  const backgroundFluidImageStack = [
+    data.wordpress.pageBy.homeFields.backgroundimage.sourceUrlSharp
+      .childImageSharp.fluid,
+    `linear-gradient(rgba(61, 89, 131, 0.63), rgba(37, 34, 35, 0.53))`,
+  ].reverse()
 
   return (
-    // <BackgroundImage
-    //   Tag="section"
-    //   fluid={backgroundFluidImageStack}
-    //   backgroundColor={`#040e18`}
-    // >
-    <TextWrapper>
-      <h1>{data.wordpress.pageBy.homeFields.title}</h1>
-      <p>{data.wordpress.pageBy.homeFields.subtitle}</p>
-      <Button>sprawdź mnie</Button>
-    </TextWrapper>
-    // </BackgroundImage>
+    <BackgroundImage
+      Tag="section"
+      fluid={backgroundFluidImageStack}
+      backgroundColor={`#040e18`}
+    >
+      <TextWrapper>
+        <h1>{data.wordpress.pageBy.homeFields.title}</h1>
+        <p>{data.wordpress.pageBy.homeFields.subtitle}</p>
+        <Button>sprawdź mnie</Button>
+      </TextWrapper>
+    </BackgroundImage>
   )
 }
 
 // export const query = graphql`
 //   {
 //     file(name: { eq: "hero" }) {
-//       childImageSharp {
-//         fluid(quality: 100, maxWidth: 2048) {
-//           ...GatsbyImageSharpFluid_tracedSVG
-//         }
+//
 //       }
 //     }
 //   }
@@ -73,6 +71,13 @@ export const query = graphql`
           title
           subtitle
           backgroundimage {
+            sourceUrlSharp {
+              childImageSharp {
+                fluid(quality: 100) {
+                  srcSet
+                }
+              }
+            }
             sourceUrl
           }
         }
