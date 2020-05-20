@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     min-height: 100vh;
     margin: 0;
+    padding: 80px 50px 0;
     font-family: 'Jost';
     font-size: 1.6rem;
     color: #ffffff;
