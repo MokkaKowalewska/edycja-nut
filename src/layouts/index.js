@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { Match } from "@reach/router"
 
 import GlobalStyle from "../assets/styles/globalStyles"
 import Navigation from "../components/Navigation/Navigation"
@@ -7,7 +8,16 @@ import Navigation from "../components/Navigation/Navigation"
 const MainLayout = ({ children }) => (
   <>
     <GlobalStyle />
-    <Navigation color={"#818181"} />
+    <Match path="/">
+      {props =>
+        props.match ? (
+          <Navigation color={"#ffffff"} />
+        ) : (
+          <Navigation color={"#000000"} />
+        )
+      }
+    </Match>
+
     {children}
   </>
 )
