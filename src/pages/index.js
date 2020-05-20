@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Image from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 import Button from "../components/Button/Button"
@@ -34,32 +33,48 @@ const StyledImage = styled(BackgroundImage)`
 `
 
 const IndexPage = ({ data }) => {
-  const backgroundFluidImageStack = [
-    data.file.childImageSharp.fluid,
-    `linear-gradient(rgba(61, 89, 131, 0.63), rgba(37, 34, 35, 0.53))`,
-  ].reverse()
+  // const backgroundFluidImageStack = [
+  //   data.pages.nodes.home.BackgroundImage.sourceUrl,
+  //   `linear-gradient(rgba(61, 89, 131, 0.63), rgba(37, 34, 35, 0.53))`,
+  // ].reverse()
 
   return (
-    <BackgroundImage
-      Tag="section"
-      fluid={backgroundFluidImageStack}
-      backgroundColor={`#040e18`}
-    >
-      <TextWrapper>
-        <h1>Nuty</h1>
-        <p>to podstawa udanego koncertu. Nie powierzaj ich edycji byle komu.</p>
-        <Button>sprawdź mnie</Button>
-      </TextWrapper>
-    </BackgroundImage>
+    // <BackgroundImage
+    //   Tag="section"
+    //   fluid={backgroundFluidImageStack}
+    //   backgroundColor={`#040e18`}
+    // >
+    <TextWrapper>
+      <h1>{data.wordpress.pageBy.homeFields.title}</h1>
+      <p>{data.wordpress.pageBy.homeFields.subtitle}</p>
+      <Button>sprawdź mnie</Button>
+    </TextWrapper>
+    // </BackgroundImage>
   )
 }
 
+// export const query = graphql`
+//   {
+//     file(name: { eq: "hero" }) {
+//       childImageSharp {
+//         fluid(quality: 100, maxWidth: 2048) {
+//           ...GatsbyImageSharpFluid_tracedSVG
+//         }
+//       }
+//     }
+//   }
+// `
+
 export const query = graphql`
-  {
-    file(name: { eq: "hero" }) {
-      childImageSharp {
-        fluid(quality: 100, maxWidth: 2048) {
-          ...GatsbyImageSharpFluid_tracedSVG
+  query MyQuery {
+    wordpress {
+      pageBy(uri: "strona-glowna") {
+        homeFields {
+          title
+          subtitle
+          backgroundimage {
+            sourceUrl
+          }
         }
       }
     }
