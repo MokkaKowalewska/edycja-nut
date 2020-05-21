@@ -19,7 +19,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: 'Jost';
     font-size: 1.6rem;
-    color: #ffffff;
   }
 
   button {

@@ -12,6 +12,7 @@ const TextWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  color: #ffffff;
 
   h1 {
     margin: 0;
@@ -48,7 +49,7 @@ const IndexPage = ({ data }) => {
     >
       <TextWrapper>
         <h1>{data.wordpress.pageBy.homeFields.title}</h1>
-        <Typing>
+        <Typing speed={20}>
           <p>{data.wordpress.pageBy.homeFields.subtitle}</p>
         </Typing>
         <Button>sprawdź mnie</Button>
