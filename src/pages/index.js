@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
+import Typing from "react-typing-animation"
 import styled from "styled-components"
 import Button from "../components/Button/Button"
 
@@ -47,7 +48,9 @@ const IndexPage = ({ data }) => {
     >
       <TextWrapper>
         <h1>{data.wordpress.pageBy.homeFields.title}</h1>
-        <p>{data.wordpress.pageBy.homeFields.subtitle}</p>
+        <Typing>
+          <p>{data.wordpress.pageBy.homeFields.subtitle}</p>
+        </Typing>
         <Button>sprawdź mnie</Button>
       </TextWrapper>
     </BackgroundImage>
