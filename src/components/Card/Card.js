@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const CardWrapper = styled.div`
-  height: 60vh;
+  min-height: 60vh;
   width: 25vw;
   margin: 20px;
   padding: 20px;
@@ -17,14 +17,11 @@ const Emoji = styled.figure`
   font-size: 10rem;
 `
 
-const Card = ({}) => (
+const Card = ({ emoji, title, description }) => (
   <CardWrapper>
-    <Emoji>🎹</Emoji>
-    <h3>Przepisywanie nut</h3>
-    <p>
-      Możesz zlecić mi przepisywanie nut. Generalnie nie wiem dokładnie, o co
-      pięć, ale zrobię po prostu nutki jak ta lala.
-    </p>
+    <Emoji>{emoji}</Emoji>
+    <h3>{title}</h3>
+    <p>{description}</p>
   </CardWrapper>
 )
 
