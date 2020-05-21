@@ -50,6 +50,13 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-graphql-image",
+      options: {
+        schemaName: "WORDPRESS",
+        imageFieldName: "source_url",
+      },
+    },
+    {
       resolve: "gatsby-source-wordpress",
       options: {
         baseUrl: "wp.edycjanut.pl",
@@ -57,15 +64,6 @@ module.exports = {
         restApiRoutePrefix: "wp-json",
         hostingWPCOM: false,
         useACF: true,
-        // Include specific ACF Option Pages that have a set post ID
-        // Regardless if an ID is set, the default options route will still be retrieved
-        // Must be using V3 of ACF to REST to include these routes
-        // Example: `["option_page_1", "option_page_2"]` will include the proper ACF option
-        // routes with the ID option_page_1 and option_page_2
-        // The IDs provided to this array should correspond to the `post_id` value when defining your
-        // options page using the provided `acf_add_options_page` method, in your WordPress setup
-        // Dashes in IDs will be converted to underscores for use in GraphQL
-        acfOptionPageIds: [],
       },
     },
     // {
