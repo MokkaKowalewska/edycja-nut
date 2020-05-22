@@ -20,7 +20,7 @@ const BioImage = styled.img`
   width: 40%;
 `
 
-const OMniePage = ({ data }) => (
+const OMnie = ({ data }) => (
   <>
     <PageHeading>{data.wordpressPage.acf.bioHeading}</PageHeading>
     <ContentWrapper>
@@ -44,4 +44,4 @@ export const query = graphql`
   }
 `
 
-export default OMniePage
+export default OMnie

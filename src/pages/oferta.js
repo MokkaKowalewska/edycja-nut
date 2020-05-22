@@ -12,7 +12,7 @@ const CardsWrapper = styled.div`
   gap: 20px;
 `
 
-const OfertaPage = ({ data }) => (
+const Oferta = ({ data }) => (
   <>
     <PageHeading>Co możesz mi zlecić?</PageHeading>
     <CardsWrapper>
@@ -45,4 +45,4 @@ export const query = graphql`
   }
 `
 
-export default OfertaPage
+export default Oferta

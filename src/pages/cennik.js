@@ -1,10 +1,10 @@
 import React from "react"
 
-const CennikPage = () => (
+const Cennik = () => (
   <>
     <h1>Cennik</h1>
     <p>hello world</p>
   </>
 )
 
-export default CennikPage
+export default Cennik
