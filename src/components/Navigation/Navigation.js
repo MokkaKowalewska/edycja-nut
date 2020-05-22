@@ -53,9 +53,6 @@ const Navigation = props => (
         <Link to="/oferta">oferta</Link>
       </NavigationListItem>
       <NavigationListItem>
-        <Link to="/cennik">cennik</Link>
-      </NavigationListItem>
-      <NavigationListItem>
         <Link to="/kontakt">kontakt</Link>
       </NavigationListItem>
     </NavigationList>
