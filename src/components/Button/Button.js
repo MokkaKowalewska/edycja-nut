@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
 
 const buttonColor = props => (props.white ? "#ffffff" : "#000000")
 
-const ButtonStyled = styled.a`
+const ButtonStyled = styled(Link)`
   display: block;
   padding: 15px;
   border-radius: 20px;

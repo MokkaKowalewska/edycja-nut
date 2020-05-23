@@ -60,7 +60,7 @@ const IndexPage = ({
         <Typing speed={20}>
           <p>{subtitle}</p>
         </Typing>
-        <Button href={`${location}o-mnie`} white>
+        <Button to="/o-mnie" white>
           sprawdź mnie
         </Button>
       </TextWrapper>

@@ -21,7 +21,7 @@ const Kontakt = () => (
         wycenię pracę jak najszybciej!
       </p>
 
-      <MailButton tag="a" href="mailto:woj.kowalewski@gmail.com">
+      <MailButton as="a" href="mailto:woj.kowalewski@gmail.com">
         Zapytaj o stawki
       </MailButton>
     </ContentWrapper>
