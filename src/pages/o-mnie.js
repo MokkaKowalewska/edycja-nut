@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import Image from "gatsby-image"
+import PropTypes from "prop-types"
 
 import PageHeading from "../components/PageHeading/PageHeading"
 
@@ -81,5 +82,9 @@ export const query = graphql`
     }
   }
 `
+
+OMnie.propTypes = {
+  data: PropTypes.node,
+}
 
 export default OMnie
