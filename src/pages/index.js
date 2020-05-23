@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
   ].reverse()
 
   return (
-    <BackgroundImage
+    <StyledImage
       Tag="section"
       fluid={backgroundFluidImageStack}
       backgroundColor={`#040e18`}
@@ -54,7 +54,7 @@ const IndexPage = ({ data }) => {
         </Typing>
         <Button>sprawdź mnie</Button>
       </TextWrapper>
-    </BackgroundImage>
+    </StyledImage>
   )
 }
 

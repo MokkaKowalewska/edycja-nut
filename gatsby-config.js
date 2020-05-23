@@ -33,27 +33,11 @@ module.exports = {
         refetchInterval: 60,
       },
     },
-    // {
-    //   resolve: "gatsby-source-graphql",
-    //   options: {
-    //     typeName: "ACF",
-    //     fieldName: "acf",
-    //     url: "http://wp.edycjanut.pl/wp-json/acf/",
-    //     refetchInterval: 60,
-    //   },
-    // },
     {
       resolve: "gatsby-plugin-graphql-image",
       options: {
         schemaName: "WORDPRESS",
         imageFieldName: "sourceUrl",
-      },
-    },
-    {
-      resolve: "gatsby-plugin-graphql-image",
-      options: {
-        schemaName: "WORDPRESS",
-        imageFieldName: "source_url",
       },
     },
     {
