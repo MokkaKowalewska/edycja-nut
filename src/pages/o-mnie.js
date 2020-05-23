@@ -92,7 +92,10 @@ export const query = graphql`
 `
 
 OMnie.propTypes = {
-  data: PropTypes.node,
+  bioheading: PropTypes.string,
+  bioname: PropTypes.string,
+  bioparagraphgroup: PropTypes.object,
+  bioimage: PropTypes.object,
 }
 
 export default OMnie
