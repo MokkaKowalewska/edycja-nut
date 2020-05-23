@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import PropTypes from "prop-types"
 
 const NavigationWrapper = styled.nav`
   position: absolute;
@@ -40,8 +41,8 @@ const NavigationListItem = styled.li`
   letter-spacing: 0.35px;
 `
 
-const Navigation = props => (
-  <NavigationWrapper color={props.color}>
+const Navigation = ({ color }) => (
+  <NavigationWrapper color={color}>
     <Logo>
       <Link to="/">edycja nut</Link>
     </Logo>
@@ -58,5 +59,9 @@ const Navigation = props => (
     </NavigationList>
   </NavigationWrapper>
 )
+
+Navigation.propTypes = {
+  color: PropTypes.string,
+}
 
 export default Navigation
