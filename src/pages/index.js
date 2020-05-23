@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import PropTypes from "prop-types"
 import BackgroundImage from "gatsby-background-image"
 import Typing from "react-typing-animation"
 import styled from "styled-components"
@@ -26,7 +27,7 @@ const TextWrapper = styled.div`
   }
 `
 
-const StyledImage = styled(BackgroundImage)`
+const Background = styled(BackgroundImage)`
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,27 +35,36 @@ const StyledImage = styled(BackgroundImage)`
   height: 100vh;
 `
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({
+  data: {
+    wordpress: {
+      pageBy: {
+        homeFields: { title, subtitle, backgroundimage },
+      },
+    },
+  },
+}) => {
   const backgroundFluidImageStack = [
-    data.wordpress.pageBy.homeFields.backgroundimage.sourceUrlSharp
-      .childImageSharp.fluid,
+    backgroundimage.sourceUrlSharp.childImageSharp.fluid,
     `linear-gradient(rgba(61, 89, 131, 0.63), rgba(37, 34, 35, 0.53))`,
   ].reverse()
 
   return (
-    <StyledImage
+    <Background
       Tag="section"
       fluid={backgroundFluidImageStack}
       backgroundColor={`#040e18`}
     >
       <TextWrapper>
-        <h1>{data.wordpress.pageBy.homeFields.title}</h1>
+        <h1>{title}</h1>
         <Typing speed={20}>
-          <p>{data.wordpress.pageBy.homeFields.subtitle}</p>
+          <p>{subtitle}</p>
         </Typing>
-        <Button to="/o-mnie">sprawdź mnie</Button>
+        <Button href={`${location}o-mnie`} white>
+          sprawdź mnie
+        </Button>
       </TextWrapper>
-    </StyledImage>
+    </Background>
   )
 }
 
@@ -66,6 +76,7 @@ export const query = graphql`
           title
           subtitle
           backgroundimage {
+            sourceUrl
             sourceUrlSharp {
               childImageSharp {
                 fluid(quality: 100) {
@@ -73,12 +84,17 @@ export const query = graphql`
                 }
               }
             }
-            sourceUrl
           }
         }
       }
     }
   }
 `
+
+IndexPage.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  backgroundimage: PropTypes.object,
+}
 
 export default IndexPage
