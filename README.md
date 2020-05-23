@@ -23,3 +23,4 @@ My new real-world project - website created with React & Gatsby & WordPress as a
 
 - sourcing from WordPress (I personally think that WP is a poor choice, but I wanted to check, if I'm able to build site on WP with basically no knowledge of PHP)
 - CI with Netlify by adding WebHook to Netlify and WordPress, deploy also triggered by gatsby build command and pushing to GitHub (obviously)
+- rendering button as an anchor element or as gatsby Link, depending on props
