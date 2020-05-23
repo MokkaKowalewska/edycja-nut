@@ -11,3 +11,15 @@
 My new real-world project - website created with React & Gatsby & WordPress as a headless CMS. It's deeply in progress!
 
 ## [LIVE](https://wizardly-kowalevski-ce4277.netlify.app/)
+
+## Stack & tools
+
+- HTML
+- CSS in JS (styled components)
+- React & Gatsby
+- GraphQL
+
+## Problems solved
+
+- sourcing from WordPress (I personally think that WP is a poor choice, but I wanted to check, if I'm able to build site on WP with basically no knowledge of PHP)
+- CI with Netlify by adding WebHook to Netlify and WordPress, deploy also triggered by gatsby build command and pushing to GitHub (obviously)
