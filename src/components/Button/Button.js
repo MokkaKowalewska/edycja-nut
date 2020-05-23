@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 
 const buttonColor = props => (props.white ? "#ffffff" : "#000000")
 
-const ButtonStyled = styled(Link)`
+export const StyledButton = styled(Link)`
   display: block;
   padding: 15px;
   border-radius: 20px;

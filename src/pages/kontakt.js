@@ -2,13 +2,13 @@ import React from "react"
 import styled from "styled-components"
 
 import PageHeading from "../components/PageHeading/PageHeading"
-import Button from "../components/Button/Button"
+import { StyledButton } from "../components/Button/Button"
 
 const ContentWrapper = styled.div`
   text-align: center;
 `
 
-const MailButton = styled(Button)`
+const MailButton = styled(StyledButton)`
   margin: 40px;
 `
 
