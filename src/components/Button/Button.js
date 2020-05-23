@@ -13,6 +13,7 @@ const ButtonStyled = styled.a`
   border-color: ${buttonColor};
   color: ${buttonColor};
   text-decoration: none;
+  transition: all 0.2s ease-in;
 
   &:hover {
     background: ${buttonColor};
