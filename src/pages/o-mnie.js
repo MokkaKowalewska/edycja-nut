@@ -30,23 +30,31 @@ const BioImage = styled.img`
   width: 40%;
 `
 
-const OMnie = ({ data }) => (
-  <>
-    <PageHeading>{data.wordpress.pageBy.bioFields.bioheading}</PageHeading>
-    <ContentWrapper>
-      <TextWrapper>
-        <h3>{data.wordpress.pageBy.bioFields.bioname}</h3>
+const OMnie = ({
+  data: {
+    wordpress: {
+      pageBy: {
+        bioFields: { bioheading, bioname, bioparagraphgroup, bioimage },
+      },
+    },
+  },
+}) => {
+  return (
+    <>
+      <PageHeading>{bioheading}</PageHeading>
+      <ContentWrapper>
+        <TextWrapper>
+          <h3>{bioname}</h3>
 
-        {Object.values(data.wordpress.pageBy.bioFields.bioparagraphgroup).map(
-          (bioParagraph, index) => {
+          {Object.values(bioparagraphgroup).map((bioParagraph, index) => {
             return <BioParagraph key={index}>{bioParagraph}</BioParagraph>
-          }
-        )}
-      </TextWrapper>
-      <BioImage src={data.wordpress.pageBy.bioFields.bioimage.sourceUrl} />
-    </ContentWrapper>
-  </>
-)
+          })}
+        </TextWrapper>
+        <BioImage src={bioimage.sourceUrl} />
+      </ContentWrapper>
+    </>
+  )
+}
 
 // I didn't want to spend money on Repeater field, that's why...
 export const query = graphql`
