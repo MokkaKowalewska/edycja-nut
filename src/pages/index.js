@@ -52,7 +52,7 @@ const IndexPage = ({ data }) => {
         <Typing speed={20}>
           <p>{data.wordpress.pageBy.homeFields.subtitle}</p>
         </Typing>
-        <Button>sprawdź mnie</Button>
+        <Button to="/o-mnie">sprawdź mnie</Button>
       </TextWrapper>
     </StyledImage>
   )
