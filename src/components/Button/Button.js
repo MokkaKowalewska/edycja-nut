@@ -17,13 +17,14 @@ export const StyledButton = styled(Link)`
   transition: all 0.2s ease-in;
 
   &:hover {
+    cursor: pointer;
     background: ${buttonColor};
     color: ${props => (!props.white ? "#ffffff" : "#000000")};
   }
 `
 
 const Button = ({ children, ...props }) => (
-  <ButtonStyled {...props}>{children}</ButtonStyled>
+  <StyledButton {...props}>{children}</StyledButton>
 )
 
 Button.propTypes = {

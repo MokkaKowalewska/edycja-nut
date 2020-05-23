@@ -9,7 +9,7 @@ const ContentWrapper = styled.div`
 `
 
 const MailButton = styled(StyledButton)`
-  margin: 40px;
+  margin: 40px auto;
 `
 
 const Kontakt = () => (
