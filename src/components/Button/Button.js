@@ -1,26 +1,31 @@
 import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 
-const Button = ({ children, href }) => {
-  const ButtonTag = href ? "a" : Link
+const buttonColor = props => (props.white ? "#ffffff" : "#000000")
 
-  const ButtonStyled = styled(ButtonTag)`
-    padding: 15px;
-    border-radius: 20px;
-    background: transparent;
-    border: 2px solid #ffffff;
-    color: #ffffff;
-    text-decoration: none;
-  `
+const ButtonStyled = styled.a`
+  display: block;
+  padding: 15px;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid;
+  border-color: ${buttonColor};
+  color: ${buttonColor};
+  text-decoration: none;
 
-  return <ButtonStyled>{children}</ButtonStyled>
-}
+  &:hover {
+    background: ${buttonColor};
+    color: ${props => (!props.white ? "#ffffff" : "#000000")};
+  }
+`
+
+const Button = ({ children, ...props }) => (
+  <ButtonStyled {...props}>{children}</ButtonStyled>
+)
 
 Button.propTypes = {
   children: PropTypes.string,
-  href: PropTypes.string,
 }
 
 export default Button
