@@ -39,6 +39,11 @@ const NavigationListItem = styled.li`
   font-weight: 700;
   line-height: 2.4px;
   letter-spacing: 0.35px;
+  transition: all 2s ease-in;
+
+  a:hover {
+    border-top: 2px solid #ffffff;
+  }
 `
 
 const Navigation = ({ color }) => (
