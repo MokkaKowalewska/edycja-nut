@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+<a
+  className="sc-AxjAm jWbXFZ"
+>
+  Zapytaj o wycenę
+</a>
+`;
+
+exports[`IndexPage Button renders correctly 1`] = `
+<a
+  className="sc-AxjAm kOxfzR"
+  href="/o-mnie"
+  white={true}
+>
+  sprawdź mnie
+</a>
+`;
+
+exports[`Kontakt Button renders correctly 1`] = `
+<a
+  className="sc-AxjAm jWbXFZ"
+  href="mailto:woj.kowalewski@gmail.com"
+>
+  Zapytaj o stawki
+</a>
+`;
