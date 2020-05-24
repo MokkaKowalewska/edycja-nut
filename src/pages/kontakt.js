@@ -9,6 +9,7 @@ const ContentWrapper = styled.div`
 `
 
 const MailButton = styled(StyledButton)`
+  display: inline-block;
   margin: 40px auto;
 `
 
@@ -20,7 +21,6 @@ const Kontakt = () => (
         Każda partytura jest inna, każdy utwór to osobna historia. Pytaj,
         wycenię pracę jak najszybciej!
       </p>
-
       <MailButton as="a" href="mailto:woj.kowalewski@gmail.com">
         Zapytaj o stawki
       </MailButton>
