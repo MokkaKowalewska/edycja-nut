@@ -8,7 +8,7 @@ const sizes = {
 
 export default Object.keys(sizes).reduce((acc, px) => {
   acc[px] = (...args) => css`
-    @media (max-width: ${sizes[px]}px) {
+    @media (min-width: ${sizes[px]}px) {
       ${css(...args)};
     }
   `
