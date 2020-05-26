@@ -3,27 +3,25 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
-const NavigationWrapper = styled.nav`
+import Logo from "../Logo/Logo"
+import media from "../../utils/media"
+
+const NavigationDesktopWrapper = styled.nav`
   position: absolute;
   top: 0;
   left: 0;
   z-index: 999;
   width: 100vw;
-  padding: 10px 50px;
+  padding: 50px 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   font-family: "Jost", serif;
 
   a {
     text-decoration: none;
     color: ${props => props.color};
   }
-`
-
-const Logo = styled.span`
-  font-family: "Righteous", serif;
-  font-size: 3rem;
 `
 
 const NavigationList = styled.ul`
@@ -47,10 +45,7 @@ const NavigationListItem = styled.li`
 `
 
 const Navigation = ({ color }) => (
-  <NavigationWrapper color={color}>
-    <Logo>
-      <Link to="/">edycja nut</Link>
-    </Logo>
+  <NavigationDesktopWrapper color={color}>
     <NavigationList>
       <NavigationListItem>
         <Link to="/o-mnie">o mnie</Link>
@@ -62,7 +57,7 @@ const Navigation = ({ color }) => (
         <Link to="/kontakt">kontakt</Link>
       </NavigationListItem>
     </NavigationList>
-  </NavigationWrapper>
+  </NavigationDesktopWrapper>
 )
 
 Navigation.propTypes = {
