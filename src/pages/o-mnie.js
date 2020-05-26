@@ -5,16 +5,24 @@ import Image from "gatsby-image"
 import PropTypes from "prop-types"
 
 import PageHeading from "../components/PageHeading/PageHeading"
+import media from "../utils/media"
 
 const ContentWrapper = styled.div`
   width: 90%;
   margin: 30px auto;
   display: flex;
   align-items: center;
+  justify-items: center;
+
+  ${media.tablet`
+    flex-direction: column;
+  `}
 `
 
 const TextWrapper = styled.div`
-  margin-right: 40px;
+  ${media.desktop`
+margin-right: 40px;
+  `}
 
   h3 {
     text-align: center;
@@ -27,7 +35,13 @@ const BioParagraph = styled.p`
 `
 
 const BioImage = styled.img`
-  width: 40%;
+  ${media.desktop`
+    width: 40%;
+  `}
+  margin: 0;
+  ${media.tablet`
+    width: 70vw;
+  `}
 `
 
 const OMnie = ({
