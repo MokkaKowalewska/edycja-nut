@@ -31,6 +31,20 @@ const NavigationList = styled.ul`
   text-transform: uppercase;
 `
 
+const MobileNavigationList = styled(NavigationList)`
+  top: 9vh;
+  right: 0;
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  height: 92vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in;
+`
+
 const NavigationListItem = styled.li`
   margin-left: 40px;
   font-size: 1.4rem;
