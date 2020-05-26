@@ -1,14 +1,14 @@
 import { css } from "styled-components"
 
 const sizes = {
-  phone: 450,
-  tablet: 768,
-  desktop: 1024,
+  phone: 767,
+  tablet: 1023,
+  desktop: 2000,
 }
 
 export default Object.keys(sizes).reduce((acc, px) => {
   acc[px] = (...args) => css`
-    @media (min-width: ${sizes[px]}px) {
+    @media (max-width: ${sizes[px]}px) {
       ${css(...args)};
     }
   `
